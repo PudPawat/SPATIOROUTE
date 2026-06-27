@@ -2,7 +2,7 @@
 
 This folder is intended to become the standalone repository:
 
-**https://github.com/PudPawat/SPATIOROUTE-Dynamic-Prompt-Routing-for-Zero-Shot-Spatial-Reasoning**
+**https://github.com/PudPawat/SPATIOROTE**
 
 ## 1. Prepare a self-contained copy (recommended)
 
@@ -25,7 +25,7 @@ git add .
 git commit -m "Initial release: SpatioRoute code and project page"
 
 git branch -M main
-git remote add origin git@github.com:PudPawat/SPATIOROUTE-Dynamic-Prompt-Routing-for-Zero-Shot-Spatial-Reasoning.git
+git remote add origin git@github.com:PudPawat/SPATIOROTE.git
 git push -u origin main
 ```
 
@@ -43,7 +43,7 @@ git push -u origin main
 3. **Branch**: `main` / folder **`/docs`**.
 4. Save. After ~1–2 minutes the site will be live at:
 
-   **https://pudpawat.github.io/SPATIOROUTE-Dynamic-Prompt-Routing-for-Zero-Shot-Spatial-Reasoning/**
+   **https://pudpawat.github.io/SPATIOROTE/**
 
 (Optional) Add a custom domain under Pages settings.
 
@@ -84,6 +84,6 @@ The included `prepare_github_release.sh` sets up `vendor/` for Option B.
 
 ```markdown
 [![Paper](https://img.shields.io/badge/arXiv-2605.18209-b31b1b)](https://arxiv.org/abs/2605.18209)
-[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://pudpawat.github.io/SPATIOROUTE-Dynamic-Prompt-Routing-for-Zero-Shot-Spatial-Reasoning/)
+[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://pudpawat.github.io/SPATIOROTE/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ```
