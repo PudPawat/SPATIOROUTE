@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: "SPATIOROUTE: Dynamic Prompt Routing for Zero-Shot Spatial Reasoning"
+message: "If you use this software, please cite our paper."
+authors:
+  - family-names: Chunhachatrachai
+    given-names: Pawat
+  - family-names: Faure
+    given-names: Gueter Josmy
+  - family-names: Su
+    given-names: Hung-Ting
+  - family-names: Hsu
+    given-names: Winston H.
+repository-code: "https://github.com/PudPawat/SPATIOROUTE-Dynamic-Prompt-Routing-for-Zero-Shot-Spatial-Reasoning"
+url: "https://arxiv.org/abs/2605.18209"
+preferred-citation:
+  type: article
+  title: "SPATIOROUTE: Dynamic Prompt Routing for Zero-Shot Spatial Reasoning"
+  authors:
+    - family-names: Chunhachatrachai
+      given-names: Pawat
+    - family-names: Faure
+      given-names: Gueter Josmy
+    - family-names: Su
+      given-names: Hung-Ting
+    - family-names: Hsu
+      given-names: Winston H.
+  year: 2026
+  doi: 10.48550/arXiv.2605.18209
+  url: "https://arxiv.org/abs/2605.18209"

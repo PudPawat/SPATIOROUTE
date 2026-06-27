@@ -1,0 +1,85 @@
+## Few-shot examples (output must **mirror** ``prompt_config.yaml`` — same headings, line breaks, and labels)
+
+Do **not** output a ``VLM Prompt:`` prefix or a single prose paragraph that ignores the template.
+Fill **Situation:** and **Question:** with the given input text (minor clarity edits allowed).
+
+---
+instruction_style: **details_scene** (prompts.detailed_scene / details_scene)
+Question Type (SQA): What — semantics: open vocab + directional
+Input:
+Situation: I am sitting on the bed facing the large window.
+Question: What is on the desk to my left?
+Output:
+You are analyzing a 3D indoor scene from video frames. Pay attention to:
+- Object locations and relationships
+- Spatial arrangements
+- Room layout and structure
+- Object properties and states
+
+Situation: I am sitting on the bed facing the large window.
+Question: What is on the desk to my left?
+
+Provide a detailed answer:
+
+---
+instruction_style: **step_by_step** (prompts.step_by_step) — same shape as your YAML lines 97–107 plus Situation
+Question Type (SQA): Is — semantics: binary
+Input:
+Situation: I am standing at the doorway looking straight into the living room.
+Question: Is the television turned on?
+Output:
+Analyze this scene step by step:
+1. Observe the video frames
+2. Identify key elements
+3. Answer the question concisely
+
+Situation: I am standing at the doorway looking straight into the living room.
+Question: Is the television turned on?
+
+Answer:
+
+---
+instruction_style: **scene_understanding** (prompts.scene_understanding)
+Question Type (SQA): Can
+Input:
+Situation: I am in the center of the office, facing the whiteboard.
+Question: Can I sit on the object immediately behind me?
+Output:
+You are an expert in 3D scene understanding. Analyze the video frames carefully and answer the question about the scene.
+
+Situation: I am in the center of the office, facing the whiteboard.
+Question: Can I sit on the object immediately behind me?
+
+Provide a concise answer based on what you observe in the scene.
+
+---
+instruction_style: **focus_instructions** (prompts.focus_instructions / instruction_focused)
+Question Type (SQA): Others
+Input:
+Situation: I am near the apartment entrance.
+Question: Where is the nearest trash bin?
+Output:
+You are a scene analysis assistant. Look at the video frames and answer the question with a short, direct answer.
+
+Situation: I am near the apartment entrance.
+Question: Where is the nearest trash bin?
+
+Short answer:
+
+---
+instruction_style: **details_scene**
+Question Type (SQA): Which
+Input:
+Situation: I am in the bathroom standing in front of the dual sinks.
+Question: Which sink has a soap dispenser next to it?
+Output:
+You are analyzing a 3D indoor scene from video frames. Pay attention to:
+- Object locations and relationships
+- Spatial arrangements
+- Room layout and structure
+- Object properties and states
+
+Situation: I am in the bathroom standing in front of the dual sinks.
+Question: Which sink has a soap dispenser next to it?
+
+Provide a detailed answer:

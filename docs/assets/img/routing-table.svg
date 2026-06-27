@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 360" role="img" aria-label="Question type routing table">
+  <rect width="980" height="360" fill="#0d1428"/>
+  <text x="490" y="38" fill="#e8edf8" font-size="24" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle" font-weight="700">SQA3D Question-Type Routing Table</text>
+  <text x="490" y="64" fill="#9aa8c7" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">First-word heuristic ’ specialized prompt template</text>
+
+  <rect x="60" y="90" width="860" height="44" rx="8" fill="#223058"/>
+  <text x="120" y="118" fill="#ffffff" font-size="16" font-family="Inter,Segoe UI,sans-serif" font-weight="700">SQA Category</text>
+  <text x="360" y="118" fill="#ffffff" font-size="16" font-family="Inter,Segoe UI,sans-serif" font-weight="700">Example prefix</text>
+  <text x="700" y="118" fill="#ffffff" font-size="16" font-family="Inter,Segoe UI,sans-serif" font-weight="700">Prompt template</text>
+
+  <g font-family="Inter,Segoe UI,sans-serif" font-size="15">
+    <rect x="60" y="140" width="860" height="34" fill="#141c33" stroke="#334066"/>
+    <text x="120" y="162" fill="#dbe7ff">What</text>
+    <text x="360" y="162" fill="#9aa8c7">"What &"</text>
+    <text x="700" y="162" fill="#5b8cff">details_scene</text>
+
+    <rect x="60" y="176" width="860" height="34" fill="#10182d" stroke="#334066"/>
+    <text x="120" y="198" fill="#dbe7ff">How many</text>
+    <text x="360" y="198" fill="#9aa8c7">"How many &"</text>
+    <text x="700" y="198" fill="#5b8cff">details_scene</text>
+
+    <rect x="60" y="212" width="860" height="34" fill="#141c33" stroke="#334066"/>
+    <text x="120" y="234" fill="#dbe7ff">Which</text>
+    <text x="360" y="234" fill="#9aa8c7">"Which &"</text>
+    <text x="700" y="234" fill="#5b8cff">details_scene</text>
+
+    <rect x="60" y="248" width="860" height="34" fill="#10182d" stroke="#334066"/>
+    <text x="120" y="270" fill="#dbe7ff">Is</text>
+    <text x="360" y="270" fill="#9aa8c7">"Is &"</text>
+    <text x="700" y="270" fill="#7c5cff">step_by_step</text>
+
+    <rect x="60" y="284" width="860" height="34" fill="#141c33" stroke="#334066"/>
+    <text x="120" y="306" fill="#dbe7ff">Can</text>
+    <text x="360" y="306" fill="#9aa8c7">"Can &"</text>
+    <text x="700" y="306" fill="#2dd4bf">scene_understanding</text>
+
+    <rect x="60" y="320" width="860" height="34" fill="#10182d" stroke="#334066"/>
+    <text x="120" y="342" fill="#dbe7ff">Others</text>
+    <text x="360" y="342" fill="#9aa8c7">Where / How / &</text>
+    <text x="700" y="342" fill="#fbbf24">focus_instructions</text>
+  </g>
+</svg>

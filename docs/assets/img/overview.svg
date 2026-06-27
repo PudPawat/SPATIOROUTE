@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="SpatioRoute overview">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5b8cff"/>
+      <stop offset="100%" stop-color="#7c5cff"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#5b8cff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#9aa8c7"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="520" fill="#0d1428"/>
+  <text x="600" y="42" fill="#e8edf8" font-size="28" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle" font-weight="700">SpatioRoute: Dynamic Prompt Routing for Zero-Shot Spatial VQA</text>
+  <text x="600" y="72" fill="#9aa8c7" font-size="16" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Egocentric video + situation text ’ tailored VLM prompt ’ spatial answer (no fine-tuning, no 3D sensors)</text>
+
+  <!-- Inputs -->
+  <rect x="40" y="130" width="210" height="90" rx="14" fill="#141c33" stroke="#334066"/>
+  <text x="145" y="162" fill="#dbe7ff" font-size="18" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle" font-weight="600">Question</text>
+  <text x="145" y="188" fill="#9aa8c7" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">"What is on my left?"</text>
+
+  <rect x="40" y="245" width="210" height="90" rx="14" fill="#141c33" stroke="#334066"/>
+  <text x="145" y="277" fill="#dbe7ff" font-size="18" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle" font-weight="600">Situation</text>
+  <text x="145" y="303" fill="#9aa8c7" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Observer pose &amp; gaze</text>
+
+  <rect x="40" y="360" width="210" height="90" rx="14" fill="#141c33" stroke="#334066"/>
+  <text x="145" y="392" fill="#dbe7ff" font-size="18" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle" font-weight="600">Video frames</text>
+  <text x="145" y="418" fill="#9aa8c7" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Uniform sampling (video-only)</text>
+
+  <!-- Router -->
+  <rect x="320" y="190" width="250" height="180" rx="18" fill="url(#g1)" opacity="0.95"/>
+  <text x="445" y="235" fill="#ffffff" font-size="22" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle" font-weight="700">SpatioRoute Router</text>
+  <text x="445" y="268" fill="#eef3ff" font-size="15" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">R: rule-based typology map</text>
+  <text x="445" y="294" fill="#eef3ff" font-size="15" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">L: text LLM + few-shots</text>
+  <text x="445" y="330" fill="#eef3ff" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">No video at routing time</text>
+
+  <!-- Prompt -->
+  <rect x="640" y="190" width="250" height="180" rx="18" fill="#141c33" stroke="#5b8cff" stroke-width="2"/>
+  <text x="765" y="235" fill="#dbe7ff" font-size="22" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle" font-weight="700">Tailored Prompt</text>
+  <text x="765" y="268" fill="#9aa8c7" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Template matched to question type</text>
+  <text x="765" y="294" fill="#9aa8c7" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Situation + Question + instructions</text>
+  <text x="765" y="330" fill="#9aa8c7" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">e.g. step_by_step / details_scene</text>
+
+  <!-- VLM -->
+  <rect x="960" y="170" width="200" height="110" rx="16" fill="#141c33" stroke="#2dd4bf" stroke-width="2"/>
+  <text x="1060" y="210" fill="#d9fff8" font-size="20" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle" font-weight="700">Vision-LM</text>
+  <text x="1060" y="238" fill="#9aa8c7" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Qwen / Llama / &</text>
+  <text x="1060" y="262" fill="#9aa8c7" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Zero-shot inference</text>
+
+  <!-- Answer -->
+  <rect x="960" y="320" width="200" height="90" rx="16" fill="url(#g2)" opacity="0.95"/>
+  <text x="1060" y="360" fill="#ffffff" font-size="20" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle" font-weight="700">Answer</text>
+  <text x="1060" y="386" fill="#eef3ff" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Spatial VQA output</text>
+
+  <!-- Arrows -->
+  <line x1="250" y1="175" x2="320" y2="240" stroke="#9aa8c7" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="250" y1="290" x2="320" y2="270" stroke="#9aa8c7" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="570" y1="280" x2="640" y2="280" stroke="#9aa8c7" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="890" y1="255" x2="960" y2="225" stroke="#9aa8c7" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="250" y1="405" x2="960" y2="240" stroke="#556" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#arrow)"/>
+  <line x1="890" y1="310" x2="960" y2="225" stroke="#556" stroke-width="2" stroke-dasharray="8 6"/>
+  <line x1="1060" y1="280" x2="1060" y2="320" stroke="#9aa8c7" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

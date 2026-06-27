@@ -1,0 +1,131 @@
+# Prompt configuration for Scene Question Answering
+# This file contains prompt templates for different use cases
+
+# Default prompt for scene understanding
+# The {question} placeholder will be replaced with the actual question
+default_prompt: |
+  You are an expert in 3D scene understanding. Analyze the video frames carefully and answer the question about the scene.
+  
+  Question: {question}
+  
+  Provide a concise answer based on what you observe in the scene.
+
+# Alternative prompts (can be selected via --prompt-name)
+prompts:
+  # Concise scene understanding prompt
+  concise_scene:
+    template: |
+      Analyze the scene in the video frames and answer concisely.
+      
+      Question: {question}
+      
+      Answer briefly:
+
+  # Detailed scene understanding prompt
+  detailed_scene: &detailed_scene
+    template: |
+      You are analyzing a 3D indoor scene from video frames. Pay attention to:
+      - Object locations and relationships
+      - Spatial arrangements
+      - Room layout and structure
+      - Object properties and states
+      
+      Question: {question}
+      
+      Provide a detailed answer:
+
+  # Alias (same template as detailed_scene) — used by preprompt generator naming
+  details_scene:
+    <<: *detailed_scene
+
+  # Default scene understanding (balanced)
+  scene_understanding:
+    template: |
+      You are an expert in 3D scene understanding. Analyze the video frames carefully and answer the question about the scene.
+      
+      Question: {question}
+      
+      Provide a concise answer based on what you observe in the scene.
+
+  # Direct and simple prompt
+  direct:
+    template: |
+      Answer the question about this scene.
+      
+      Question: {question}
+      
+      Answer:
+
+  # Instruction-focused prompt
+  instruction_focused: &instruction_focused
+    template: |
+      You are a scene analysis assistant. Look at the video frames and answer the question with a short, direct answer.
+      
+      Question: {question}
+      
+      Short answer:
+
+  # Alias (same as instruction_focused) — "focus-instructions" style for preprompt generator
+  focus_instructions:
+    <<: *instruction_focused
+
+  # Spatial reasoning focused
+  spatial_reasoning:
+    template: |
+      Analyze the spatial relationships in this 3D scene. Focus on positions, distances, and orientations of objects.
+      
+      Question: {question}
+      
+      Answer concisely:
+
+  # Object-centric prompt
+  object_centric:
+    template: |
+      Examine the objects in this scene. Identify what objects are present, their properties, and their relationships.
+      
+      Question: {question}
+      
+      Provide a brief answer:
+
+  # Minimal prompt
+  minimal:
+    template: |
+      {question}
+      
+      Answer:
+
+  # Step-by-step reasoning prompt
+  step_by_step:
+    template: |
+      Analyze this scene step by step:
+      1. Observe the video frames
+      2. Identify key elements
+      3. Answer the question concisely
+      
+      Situation: {situation}
+      
+      Question: {question}
+      
+      Answer:
+
+  # Context-aware prompt
+  context_aware:
+    template: |
+      You are viewing a 3D indoor scene. Consider the context, spatial layout, and object relationships when answering.
+      
+      Question: {question}
+      
+      Concise answer:
+
+  # Question-focused prompt
+  question_focused:
+    template: |
+      Based on the scene shown in the video frames, answer this question:
+      
+      {question}
+      
+      Provide a direct, concise answer:
+
+# Default prompt name to use
+default_prompt_name: scene_understanding
+

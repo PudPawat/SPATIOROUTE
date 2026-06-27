@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Results & checkpoints
+results/*.json
+results/*.csv
+!results/.gitkeep
+
+# Models & cache
+.cache/
+.huggingface/
+*.safetensors
+*.bin
+
+# Data (host locally; do not commit videos)
+dataset/
+*.mp4
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Release staging
+release_staging/

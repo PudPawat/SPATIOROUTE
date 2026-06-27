@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 300" role="img" aria-label="End-to-end pipeline">
+  <rect width="1100" height="300" fill="#0d1428"/>
+  <text x="550" y="34" fill="#e8edf8" font-size="22" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle" font-weight="700">Reproducible Experiment Pipeline</text>
+
+  <g font-family="Inter,Segoe UI,sans-serif">
+    <rect x="30" y="80" width="150" height="150" rx="14" fill="#141c33" stroke="#334066"/>
+    <text x="105" y="115" fill="#fff" font-size="16" text-anchor="middle" font-weight="700">1. Route</text>
+    <text x="105" y="145" fill="#9aa8c7" font-size="13" text-anchor="middle">generate_rule</text>
+    <text x="105" y="165" fill="#9aa8c7" font-size="13" text-anchor="middle">or</text>
+    <text x="105" y="185" fill="#9aa8c7" font-size="13" text-anchor="middle">generate_llm</text>
+
+    <text x="205" y="155" fill="#9aa8c7" font-size="24" text-anchor="middle">’</text>
+
+    <rect x="230" y="80" width="170" height="150" rx="14" fill="#141c33" stroke="#5b8cff"/>
+    <text x="315" y="115" fill="#fff" font-size="16" text-anchor="middle" font-weight="700">2. Preprompts</text>
+    <text x="315" y="145" fill="#9aa8c7" font-size="13" text-anchor="middle">JSON bundle</text>
+    <text x="315" y="165" fill="#9aa8c7" font-size="13" text-anchor="middle">question_id ’</text>
+    <text x="315" y="185" fill="#9aa8c7" font-size="13" text-anchor="middle">generated_prompt</text>
+
+    <text x="425" y="155" fill="#9aa8c7" font-size="24" text-anchor="middle">’</text>
+
+    <rect x="450" y="80" width="170" height="150" rx="14" fill="#141c33" stroke="#2dd4bf"/>
+    <text x="535" y="115" fill="#fff" font-size="16" text-anchor="middle" font-weight="700">3. VLM Eval</text>
+    <text x="535" y="145" fill="#9aa8c7" font-size="13" text-anchor="middle">eval/routed.py</text>
+    <text x="535" y="165" fill="#9aa8c7" font-size="13" text-anchor="middle">video frames +</text>
+    <text x="535" y="185" fill="#9aa8c7" font-size="13" text-anchor="middle">routed prompt</text>
+
+    <text x="645" y="155" fill="#9aa8c7" font-size="24" text-anchor="middle">’</text>
+
+    <rect x="670" y="80" width="170" height="150" rx="14" fill="#141c33" stroke="#7c5cff"/>
+    <text x="755" y="115" fill="#fff" font-size="16" text-anchor="middle" font-weight="700">4. Metrics</text>
+    <text x="755" y="145" fill="#9aa8c7" font-size="13" text-anchor="middle">contains / exact</text>
+    <text x="755" y="165" fill="#9aa8c7" font-size="13" text-anchor="middle">by question type</text>
+    <text x="755" y="185" fill="#9aa8c7" font-size="13" text-anchor="middle">SQA3D splits</text>
+
+    <text x="865" y="155" fill="#9aa8c7" font-size="24" text-anchor="middle">’</text>
+
+    <rect x="890" y="80" width="180" height="150" rx="14" fill="url(#grad)" stroke="#fbbf24"/>
+    <defs>
+      <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#5b8cff"/>
+        <stop offset="100%" stop-color="#7c5cff"/>
+      </linearGradient>
+    </defs>
+    <text x="980" y="115" fill="#fff" font-size="16" text-anchor="middle" font-weight="700">5. Paper table</text>
+    <text x="980" y="145" fill="#eef3ff" font-size="13" text-anchor="middle">Up to +5% vs</text>
+    <text x="980" y="165" fill="#eef3ff" font-size="13" text-anchor="middle">fixed prompt</text>
+    <text x="980" y="185" fill="#eef3ff" font-size="13" text-anchor="middle">zero-shot SOTA</text>
+  </g>
+
+  <text x="550" y="270" fill="#9aa8c7" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Baselines: fixed prompt (eval/baseline.py) " CoT two-pass (eval/cot.py)</text>
+</svg>

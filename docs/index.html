@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SpatioRoute: Dynamic Prompt Routing for Zero-Shot Spatial Reasoning — CVPR 2026 workshop paper code and project page." />
+  <title>SpatioRoute | Zero-Shot Spatial VQA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="hero container">
+    <div class="badge-row">
+      <span class="badge">CVPR 2026 · 3D-LLM/VLA Workshop</span>
+      <span class="badge">Zero-shot · Video-only · No 3D sensors</span>
+    </div>
+    <h1>SpatioRoute</h1>
+    <p class="subtitle">
+      <strong>Dynamic Prompt Routing for Zero-Shot Spatial Reasoning</strong><br />
+      Tailor each egocentric question to a specialized prompt template — with rule-based routing (SpatioRoute-R)
+      or a lightweight text LLM with few-shots (SpatioRoute-L) — then answer with any vision-language model.
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="https://arxiv.org/abs/2605.18209" target="_blank" rel="noopener">Paper (arXiv)</a>
+      <a class="btn btn-secondary" href="https://github.com/PudPawat/SPATIOROUTE-Dynamic-Prompt-Routing-for-Zero-Shot-Spatial-Reasoning" target="_blank" rel="noopener">Code</a>
+      <a class="btn btn-secondary" href="#getting-started">Quick Start</a>
+    </div>
+    <p class="lead" style="margin-top:1.25rem;">
+      Pawat Chunhachatrachai · Gueter Josmy Faure · Hung-Ting Su · Winston H. Hsu
+    </p>
+  </header>
+
+  <main class="container">
+    <section id="abstract">
+      <div class="section-card">
+        <h2>Abstract</h2>
+        <p class="lead">
+          Spatial question answering over egocentric video requires vision-language models to reason about 3D layout,
+          affordances, and viewer-relative directions — especially in the zero-shot setting. SpatioRoute routes each
+          question to a semantically tailored prompt without fine-tuning or 3D input. On SQA3D, it improves overall
+          accuracy by up to <strong>5%</strong> over fixed prompts across multiple VLM families, and outperforms uniform
+          chain-of-thought prompting on Qwen models.
+        </p>
+        <div class="grid-3">
+          <div class="card"><strong>No training</strong><br />Off-the-shelf VLMs + optional small text router.</div>
+          <div class="card"><strong>Video-only</strong><br />Uniformly sampled frames; no point-cloud pipeline.</div>
+          <div class="card"><strong>Question-aware</strong><br />What / Is / Can / … → specialized templates.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview">
+      <div class="section-card">
+        <h2>How SpatioRoute Works</h2>
+        <div class="figure">
+          <img src="assets/img/overview.svg" alt="SpatioRoute system overview diagram" />
+          <div class="figure-caption">
+            Figure 1 — Overview. Question + situation are routed to a tailored text prompt; the VLM consumes that prompt with sampled video frames.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modes">
+      <div class="section-card">
+        <h2>SpatioRoute-R vs SpatioRoute-L</h2>
+        <div class="figure">
+          <img src="assets/img/modes.svg" alt="Comparison of rule-based and LLM-driven routing" />
+          <div class="figure-caption">
+            Figure 2 — Two complementary routing modes sharing the same typology table.
+          </div>
+        </div>
+        <div class="grid-2" style="margin-top:1rem;">
+          <div class="card">
+            <span class="pill">SpatioRoute-R</span>
+            <p>Deterministic map from SQA3D question type to YAML template. Fills <code>Situation:</code> and <code>Question:</code> lines. Fast and fully reproducible.</p>
+          </div>
+          <div class="card">
+            <span class="pill">SpatioRoute-L</span>
+            <p>Same route + semantics flags, then a small text LLM (default Qwen2.5-0.5B) rewrites the prompt using few-shot YAML-layout examples. No video at routing time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="routing">
+      <div class="section-card">
+        <h2>Routing Table</h2>
+        <div class="figure">
+          <img src="assets/img/routing-table.svg" alt="SQA3D question type to prompt template routing table" />
+          <div class="figure-caption">
+            Figure 3 — First-word heuristic classification → specialized prompt template (see <code>configs/prompt_config.yaml</code>).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pipeline">
+      <div class="section-card">
+        <h2>Code Pipeline</h2>
+        <div class="figure">
+          <img src="assets/img/pipeline.svg" alt="Experiment pipeline from routing to metrics" />
+          <div class="figure-caption">
+            Figure 4 — Reproducible experiment flow in this repository.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="paper-figures">
+      <div class="section-card">
+        <h2>Paper Figures</h2>
+        <p class="lead">
+          Drop exported PNG/PDF figures from the paper into <code>docs/assets/img/paper/</code> to replace or supplement the diagrams above.
+          Suggested filenames: <code>teaser.png</code>, <code>method.png</code>, <code>results.png</code>.
+        </p>
+        <div class="figure" id="paper-teaser-slot">
+          <!-- Replace src with assets/img/paper/teaser.png when available -->
+          <img src="assets/img/overview.svg" alt="Paper teaser placeholder — replace with docs/assets/img/paper/teaser.png" />
+          <div class="figure-caption">
+            Placeholder teaser — replace with your paper Figure 1 (<code>docs/assets/img/paper/teaser.png</code>).
+          </div>
+        </div>
+        <div class="note">
+          If you send us paper figure exports (PNG, 1600px wide recommended), update the <code>&lt;img src&gt;</code> paths in
+          <code>docs/index.html</code> under the Paper Figures section.
+        </div>
+      </div>
+    </section>
+
+    <section id="results">
+      <div class="section-card">
+        <h2>Key Findings</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Condition</th>
+              <th>Description</th>
+              <th>Typical outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Fixed baseline</td>
+              <td>Single prompt for all questions</td>
+              <td>Lower overall accuracy</td>
+            </tr>
+            <tr>
+              <td>SpatioRoute-R / L</td>
+              <td>Question-type routing</td>
+              <td>Up to ~5% gain on SQA3D test</td>
+            </tr>
+            <tr>
+              <td>Think-it-Twice CoT</td>
+              <td>Uniform two-pass reasoning</td>
+              <td>Often hurts Qwen-family VLMs</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="lead" style="margin-top:1rem;">Run the included scripts to reproduce tables on your hardware and VLM checkpoints.</p>
+      </div>
+    </section>
+
+    <section id="getting-started">
+      <div class="section-card">
+        <h2>Quick Start</h2>
+        <pre><code># Clone &amp; install
+git clone git@github.com:PudPawat/SPATIOROUTE-Dynamic-Prompt-Routing-for-Zero-Shot-Spatial-Reasoning.git
+cd SPATIOROUTE-Dynamic-Prompt-Routing-for-Zero-Shot-Spatial-Reasoning
+python3 -m venv venv &amp;&amp; source venv/bin/activate
+pip install -r requirements.txt
+
+# Prepare self-contained release (copies VLM eval deps from parent repo once)
+./scripts/prepare_github_release.sh /path/to/Qwen_playground
+
+# Smoke test (50 samples)
+./scripts/run_smoke_test.sh
+
+# Full SpatioRoute-R → VLM eval
+python -m experiments.spatioroute.preprompts.generate_rule \
+  --split test --output results/preprompts_r_test.json
+python -m experiments.spatioroute.eval.routed \
+  --preprompt-json results/preprompts_r_test.json \
+  --model-name Qwen/Qwen2-VL-2B-Instruct --load-in-4bit \
+  --output results/spatioroute_r_test.json</code></pre>
+        <p class="lead">See the repository <a href="https://github.com/PudPawat/SPATIOROUTE-Dynamic-Prompt-Routing-for-Zero-Shot-Spatial-Reasoning/blob/main/README.md">README</a> for full instructions.</p>
+      </div>
+    </section>
+
+    <section id="citation">
+      <div class="section-card">
+        <h2>Citation</h2>
+        <pre><code>@article{chunhachatrachai2026spatioroute,
+  title   = {SPATIOROUTE: Dynamic Prompt Routing for Zero-Shot Spatial Reasoning},
+  author  = {Chunhachatrachai, Pawat and Faure, Gueter Josmy and Su, Hung-Ting and Hsu, Winston H.},
+  journal = {arXiv preprint arXiv:2605.18209},
+  year    = {2026}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>
+      <a href="https://arxiv.org/abs/2605.18209">arXiv:2605.18209</a> ·
+      <a href="https://github.com/PudPawat/SPATIOROUTE-Dynamic-Prompt-Routing-for-Zero-Shot-Spatial-Reasoning">GitHub</a>
+    </p>
+    <p>© 2026 SpatioRoute authors. MIT License.</p>
+  </footer>
+</body>
+</html>

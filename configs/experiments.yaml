@@ -1,0 +1,38 @@
+# SpatioRoute experiment matrix (paper conditions)
+#
+# Each row: method → preprompt step → VLM eval → analysis
+#
+# Methods:
+#   baseline       — fixed prompt (scene_understanding)
+#   spatioroute_r  — rule-based routing (YAML fill)
+#   spatioroute_l  — LLM routing with few-shots (no video at routing)
+#   cot            — Think-it-Twice simple two-pass CoT (comparison)
+
+split: test
+dataset_dir: dataset/SQA
+max_frames: 8
+max_new_tokens: 64
+save_interval: 50
+
+# Default VLM for paper-style runs (change per model family)
+vlm_model: Qwen/Qwen2-VL-2B-Instruct
+vlm_quantization: load-in-4bit
+
+# Router LLM for SpatioRoute-L only (text-only, fast)
+router_llm: Qwen/Qwen2.5-0.5B-Instruct
+
+routing_table:
+  What: details_scene
+  How many: details_scene
+  Which: details_scene
+  Is: step_by_step
+  Can: scene_understanding
+  Others: focus_instructions
+
+outputs:
+  preprompts_r: experiments/spatioroute/results/preprompts_r_{split}.json
+  preprompts_l: experiments/spatioroute/results/preprompts_l_{split}.json
+  baseline: experiments/spatioroute/results/baseline_{model}_{split}.json
+  spatioroute_r: experiments/spatioroute/results/spatioroute_r_{model}_{split}.json
+  spatioroute_l: experiments/spatioroute/results/spatioroute_l_{model}_{split}.json
+  cot: experiments/spatioroute/results/cot_{model}_{split}.json

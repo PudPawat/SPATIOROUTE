@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 420" role="img" aria-label="SpatioRoute-R and SpatioRoute-L comparison">
+  <rect width="1180" height="420" fill="#0d1428"/>
+  <text x="590" y="38" fill="#e8edf8" font-size="24" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle" font-weight="700">Two Routing Modes: SpatioRoute-R vs SpatioRoute-L</text>
+
+  <!-- R panel -->
+  <rect x="40" y="70" width="530" height="310" rx="18" fill="#141c33" stroke="#5b8cff"/>
+  <text x="305" y="105" fill="#ffffff" font-size="22" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle" font-weight="700">SpatioRoute-R (Rule-based)</text>
+  <rect x="70" y="130" width="180" height="56" rx="10" fill="#1a2444" stroke="#334066"/>
+  <text x="160" y="162" fill="#dbe7ff" font-size="15" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Question text</text>
+  <text x="305" y="162" fill="#9aa8c7" font-size="22" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">’</text>
+  <rect x="360" y="130" width="180" height="56" rx="10" fill="#1a2444" stroke="#334066"/>
+  <text x="450" y="155" fill="#dbe7ff" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">SQA typology</text>
+  <text x="450" y="175" fill="#9aa8c7" font-size="13" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">What / Is / Can / &</text>
+  <text x="305" y="215" fill="#9aa8c7" font-size="22" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">“</text>
+  <rect x="130" y="230" width="350" height="56" rx="10" fill="#223058" stroke="#5b8cff"/>
+  <text x="305" y="262" fill="#ffffff" font-size="15" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Deterministic YAML template fill</text>
+  <text x="305" y="305" fill="#9aa8c7" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Fast " No extra model " Fully reproducible</text>
+  <text x="305" y="345" fill="#2dd4bf" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Output: generated_prompt JSON</text>
+
+  <!-- L panel -->
+  <rect x="610" y="70" width="530" height="310" rx="18" fill="#141c33" stroke="#7c5cff"/>
+  <text x="875" y="105" fill="#ffffff" font-size="22" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle" font-weight="700">SpatioRoute-L (LLM-driven)</text>
+  <rect x="640" y="130" width="150" height="56" rx="10" fill="#1a2444" stroke="#334066"/>
+  <text x="715" y="162" fill="#dbe7ff" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Question + Situation</text>
+  <text x="810" y="162" fill="#9aa8c7" font-size="22" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">’</text>
+  <rect x="830" y="130" width="150" height="56" rx="10" fill="#1a2444" stroke="#334066"/>
+  <text x="905" y="155" fill="#dbe7ff" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Same route +</text>
+  <text x="905" y="175" fill="#9aa8c7" font-size="13" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">semantics flags</text>
+  <text x="875" y="215" fill="#9aa8c7" font-size="22" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">“</text>
+  <rect x="700" y="230" width="350" height="56" rx="10" fill="#2a2250" stroke="#7c5cff"/>
+  <text x="875" y="255" fill="#ffffff" font-size="15" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Small text LLM rewrites prompt</text>
+  <text x="875" y="275" fill="#cdbfff" font-size="13" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Few-shot YAML layout examples " No video input</text>
+  <text x="875" y="315" fill="#9aa8c7" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Adaptive wording while preserving template structure</text>
+  <text x="875" y="345" fill="#2dd4bf" font-size="14" font-family="Inter,Segoe UI,sans-serif" text-anchor="middle">Default router: Qwen2.5-0.5B-Instruct</text>
+</svg>
