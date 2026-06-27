@@ -1,10 +1,10 @@
 # SpatioRoute: Dynamic Prompt Routing for Zero-Shot Spatial Reasoning
 
 [![Paper](https://img.shields.io/badge/arXiv-2605.18209-b31b1b)](https://arxiv.org/abs/2605.18209)
-[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://pudpawat.github.io/SPATIOROTE/)
+[![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://pudpawat.github.io/SPATIOROUTE/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Project page:** https://pudpawat.github.io/SPATIOROTE/
+**Project page:** https://pudpawat.github.io/SPATIOROUTE/
 
 Reproducible experiment code for the CVPR 2026 workshop paper  
 **[SPATIOROUTE: Dynamic Prompt Routing for Zero-Shot Spatial Reasoning](https://arxiv.org/abs/2605.18209)**  
